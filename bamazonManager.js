@@ -1,7 +1,5 @@
-const _ = require("lodash");
 const inquirer = require("inquirer");
 const mysql = require("mysql2");
-const Table = require("cli-table");
 
 // Empty shopping cart.
 let itemInCart = {};
@@ -70,6 +68,7 @@ const viewProducts = () => {
       );
     });
   });
+  connection.close();
 };
 
 // If a manager selects View Low Inventory, then it should list all items with an inventory count lower than five.
@@ -89,6 +88,7 @@ const viewLowInventory = () => {
         : console.log("Nothing! We are well-stocked on everything.");
     }
   );
+  connection.close();
 };
 
 // If a manager selects Add to Inventory, your app should display a prompt that will let the manager "add more" of any item currently in the store.
@@ -124,6 +124,7 @@ const addToInventory = () => {
           );
         }
       );
+      connection.close();
     })
     .catch(err => {
       console.log(err);
@@ -157,8 +158,14 @@ const addNewProduct = () => {
     ])
     .then(answers => {
       connection.query(
-        "INSERT INTO `products` (product_name, department_name, price, stock_quantity) VALUES (?, ?, ?, ?)",
-        [answers.name, answers.department, +answers.price, +answers.quantity],
+        "INSERT INTO `products` (product_name, department_name, price, stock_quantity, product_sales) VALUES (?, ?, ?, ?, ?)",
+        [
+          answers.name,
+          answers.department,
+          +answers.price,
+          +answers.quantity,
+          0
+        ],
         function(err, results) {
           console.log(
             `${answers.quantity} units of '${
@@ -169,6 +176,7 @@ const addNewProduct = () => {
           );
         }
       );
+      connection.close();
     })
     .catch(err => {
       console.log(err);

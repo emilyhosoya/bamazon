@@ -1,7 +1,5 @@
-const _ = require("lodash");
 const inquirer = require("inquirer");
 const mysql = require("mysql2");
-const Table = require("cli-table");
 
 // Empty shopping cart.
 let itemInCart = {};
