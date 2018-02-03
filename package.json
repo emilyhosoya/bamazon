@@ -1,0 +1,26 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "DU Coding Bootcamp Assignment #12: Node.js &amp; MySQL",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilyhosoya/bamazon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilyhosoya/bamazon/issues"
+  },
+  "homepage": "https://github.com/emilyhosoya/bamazon#readme",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "inquirer": "^5.0.1",
+    "lodash": "^4.17.4",
+    "mysql2": "^1.5.1"
+  }
+}
