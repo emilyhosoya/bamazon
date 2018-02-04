@@ -8,4 +8,4 @@ This is an Amazon-like storefront using Node.js and MySQL. The app takes in orde
 
 ### Demo
 
-[![Using Node.js and MySQL for Tracking Inventory](https://imgur.com/a/nahiF)](https://vimeo.com/254209955 "Using Node.js and MySQL for Tracking Inventory - Click to Watch on Vimeo")
+[![Using Node.js and MySQL for Tracking Inventory](https://i.imgur.com/4OrbfiI.png)(https://vimeo.com/254209955 "Using Node.js and MySQL for Tracking Inventory - Click to Watch on Vimeo")
